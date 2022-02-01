@@ -18,6 +18,11 @@
 html{
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
 }
 
 body{
@@ -325,20 +330,24 @@ mina{
 .main-product-detail p{
     font-weight: 500;
     color: var(--grey);
-    text-align: center;
     margin: 3rem 0;
     font-size: 1.4rem;
+    display: block;
+    text-align: left;
 }
 
 .product-cards--container{
     width: 90%;
     height: auto;
     min-width: 288px;
-    max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+.main-product-detail .parrafo{
+    text-align: center;
 }
 
 
@@ -376,12 +385,17 @@ mina{
 }
 
 
+.product-detail--card span.check{
+    background-image: url(../assets/icons/check-circle.svg);
+}
+
 
 .product-detail--card .product--card-title{
     font-size: 1.8rem;
     color: var(--just-white);
     margin-bottom: 0;
 }
+
 
 .product-detail--card .product--card-body{
     font-size: 1.4rem;
@@ -397,6 +411,8 @@ mina{
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    margin-bottom: 3rem;
+    background-attachment:fixed;
 }
 
 .bitcoin-img-container h2{
@@ -406,3 +422,203 @@ mina{
     line-height: 2.6rem;
     color: var(--just-white);   
 }
+
+.contenedor-planes{
+    margin-top: 7rem;
+    min-width: 320px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+div.planes-texto-superior{
+    width: 80%;
+    margin: 0 auto;
+}
+
+div.planes-texto-superior h2{
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+div.planes-texto-superior p{
+    font-weight: 500;
+    color: #757575;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.contenedor-tarjetas{
+    margin: 0 auto;
+    width: 80%;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    height: 35rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.contenedor-tarjetas::-webkit-scrollbar{
+    background-color: var(--soft-orange);
+    border-radius: 10px;
+    height: 8px;
+}
+
+.contenedor-tarjetas::-webkit-scrollbar-thumb{
+    background-color: var(--bitcoin-orange); 
+}
+
+
+.tarjeta{
+    position: relative;
+    scroll-snap-align: center;
+    height: auto;
+    min-width: 210px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+    padding: 3rem;
+    transition: all 0.2s ease-in;
+}
+
+.tarjeta:hover{
+    transform: scale(0.95);
+}
+
+.tarjeta .tarjeta-encabezado{
+    width: 120px;
+    background-color: var(--bitcoin-orange);
+    text-align: center;
+    font-family: Inter;
+    color: var(--just-white);
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    position: absolute;
+    top:  -15px;
+    right: calc(50% - 60px);
+}
+
+.tarjeta-contenido{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta-contenido h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+.tarjeta-contenido .contenedor-precio{
+    font-size: 5.2rem;
+    font-family: Inter;
+    font-weight: bold;
+    margin-top: .5rem;
+    position: relative;
+}
+
+.tarjeta-contenido .contenedor-precio::before{
+    content: "$";
+    position: absolute;
+    font-size: 1.6rem;
+    top: 16%;
+    left: -18%;
+}
+
+
+.tarjeta-contenido .texto{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #757575;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.tarjeta-contenido button{
+    font-size: 1.4rem;
+    padding: 12px 16px;
+    background-color: var(--off-white);
+    border: 2px solid var(--bitcoin-orange);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-out;
+}
+
+.tarjeta-contenido button:hover{
+    background-color: var(--warm-black);
+    color: var(--just-white);
+}
+
+
+.tarjeta-contenido button span{
+    display: inline-block;
+    background-image: url(../assets/icons/orange-right-arrow.svg);
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-size: contain;
+}
+
+footer{
+    margin-top: 2rem;
+    min-width: 320px;
+    width: 100%;
+    background-color: var(--bitcoin-orange);
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer li{
+    list-style: none;
+    padding: .5rem;
+}
+footer a{
+    color: var(--just-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 930px) {
+    .product-cards--container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 80%;
+    }
+    .contenedor-tarjetas::-webkit-scrollbar{
+        display: none;
+    }
+
+    .main-tables-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .main-currency-table.next{
+        display: inline-block;
+    }
+
+    #btnBack,#btnNext{
+        display: none;
+    }
+}
+

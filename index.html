@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sr load-hidden">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,17 +14,21 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- ------------- -->
     <title>Bata Bit</title>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+	<script>
+		ScrollReveal({ duration: 1000 })
+	</script>
 </head>
 <body>
-    <header>
-        <img src="assets/img/logo.svg" alt="Logo de la Pagina Web">
+    <header class="headline">
+        <a href="/"><img loading="lazy" src="assets/img/logo.svg" alt="Logo de la Pagina Web"></a>
         <div class="header--title-container">
             <h1>La próxima revolución en el intercambio de criptomonedas.</h1>
             <p>Batatabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
-            <a class="header--button" href="">Conoce Nuestros Planes <span></span></a>
+            <a class="header--button" href="#planes">Conoce Nuestros Planes <span></span></a>
         </div>
     </header>
-    <main>
+    <main class="tagline">
         <section class="main-exchange-container">
             <div class="backgroundImg">
             </div>
@@ -95,7 +99,7 @@
             <span class="logo"></span>
             <div>
                 <h2>Creamos un producto sin comparación.</h2>
-                <p>Confiable y diseñado para su uso diario.</p>
+                <p class="parrafo">Confiable y diseñado para su uso diario.</p>
             </div>
             <section class="product-cards--container">
                 <article class="product-detail--card">
@@ -113,15 +117,69 @@
                     <p class="product--card-title">Compara monedas</p>
                     <p class="product--card-body">No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual.</p>
                 </article>
+                <article class="product-detail--card">
+                    <span class="imagen-svg check"></span>
+                    <p class="product--card-title">Información confiable</p>
+                    <p class="product--card-body">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+                </article>
             </section>
         </section>
         <section class="bitcoin-img-container">
             <h2>Conócelo hoy.</h2>
         </section>
-        <section></section>
+        <section class="contenedor-planes" id="planes">
+            <div class="planes-texto-superior">
+                <h2>Escoge el plan que mejor se ajuste a ti.</h2>
+                <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
+            </div>
+            <section class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <p class="tarjeta-encabezado">Recomendado</p>
+                    <div class="tarjeta-contenido">
+                        <h3>Pago Anual</h3>
+                        <div class="contenedor-precio">
+                            <p class="precio">99</p>
+                        </div>
+                        <p class="texto">*Ahorras $129 comparado al plan mensual.</p>
+                        <button>Escoger este <span></span></button>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <p class="tarjeta-encabezado">Recomendado</p>
+                    <div class="tarjeta-contenido">
+                        <h3>Pago Anual</h3>
+                        <div class="contenedor-precio">
+                            <p class="precio">99</p>
+                        </div>
+                        <p class="texto">*Ahorras $129 comparado al plan mensual.</p>
+                        <button>Escoger este <span></span></button>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <p class="tarjeta-encabezado">Recomendado</p>
+                    <div class="tarjeta-contenido">
+                        <h3>Pago Anual</h3>
+                        <div class="contenedor-precio">
+                            <p class="precio">99</p>
+                        </div>
+                        <p class="texto">*Ahorras $129 comparado al plan mensual.</p>
+                        <button>Escoger este <span></span></button>
+                    </div>
+                </article>
+            </section>
+        </section>
     </main>
     <footer>
-
+        <section>
+            <ul>
+                <li><a href="">Linkendin</a></li>
+                <li><a href="">Crunchbase</a></li>
+                <li><a href="">HackerNews</a></li>
+            </ul>
+        </section>
+        <section>
+            <img loading="lazy" src="assets/img/logo-footer.svg" alt="logo Batatabit footer">
+        </section>
     </footer>
     <script src="js/app.js"></script>
 </body>
